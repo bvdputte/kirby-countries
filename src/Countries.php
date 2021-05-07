@@ -7,14 +7,8 @@ class Countries
     // Expects an ISO country code and returns a localized country name
     public static function codeToName($code, $lang = null)
     {
-        // Define language
-        if (!is_null($lang) && !is_null(kirby()->language($lang))) {
-            $langCode = $lang;
-        } else {
-            $langCode = kirby()->language()->code();
-        }
-
         // Get all localized countries
+        $langCode = self::getLanguageCode($lang);
         $countries = self::getAllCountries($langCode);
 
         // Return countryname
@@ -42,9 +36,23 @@ class Countries
         return $arr;
     }
 
-    // Returns an associative array of ISO country codes matched to localized country names
-    public static function getAllCountries($lang)
+    // Get language
+    private static function getLanguageCode($lang)
     {
-        return (include dirname(__FILE__)."/../../". option("bvdputte.countries.datafolder") ."/data/".$lang."/country.php");
+        if (!is_null($lang) && !is_null(kirby()->language($lang))) {
+            $langCode = $lang;
+        } else {
+            $langCode = kirby()->language()->code();
+        }
+
+        return $langCode;
+    }
+
+    // Returns an associative array of ISO country codes matched to localized country names
+    public static function getAllCountries($lang = null)
+    {
+        $langCode = self::getLanguageCode($lang);
+
+        return (include dirname(__FILE__)."/../../". option("bvdputte.countries.datafolder") ."/data/".$langCode."/country.php");
     }
 }

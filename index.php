@@ -10,7 +10,7 @@ Kirby::plugin('bvdputte/countries', [
     ],
     'siteMethods' => [
         'getCountries' => function () {
-            return bvdputte\Countries::getAllCountries(kirby()->language()->code());
+            return bvdputte\Countries::getAllCountries();
         }
     ]
 ]);
