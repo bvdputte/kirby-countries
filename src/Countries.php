@@ -26,7 +26,7 @@ class Countries
     }
 
     // Expects a delimited string of ISO country codes and returns as a delimited string of country names
-    public static function codesToNames($codes, $delimiter = ", ", $lang = null)
+    public static function codesToNames($codes, $lang = null, $delimiter = ", ")
     {
         return implode($delimiter, self::codesToArray(explode($delimiter, $codes), $lang));
     }

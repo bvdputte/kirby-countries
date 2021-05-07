@@ -47,8 +47,8 @@ bvdputte\Countries::codeToName(
 ```php
 bvdputte\Countries::codesToNames(
     "BE, FR, DE", // ISO country code
-    ", ", // OPTIONAL - delimiter, defaults to ", " (the kirby default behaviour)
-    "NL" // OPTIONAL - Language/locale identifier, defaults to the current Kirby language
+    "NL", // OPTIONAL - Language/locale identifier, defaults to the current Kirby language
+    ", " // OPTIONAL - delimiter, defaults to ", " (the kirby default behaviour)
 );
 // => Outputs "België, Frankrijk, Duitsland"
 ```
@@ -56,8 +56,7 @@ bvdputte\Countries::codesToNames(
 3. Expects an array of ISO country codes and returns as an associative array of country names
 ```php
 bvdputte\Countries::codesToArray(
-    "BE, FR, DE", // ISO country code
-    ", ", // OPTIONAL - delimiter, defaults to ", " (the kirby default behaviour)
+    ["BE", "FR", "DE"], // ISO country code
     "NL" // OPTIONAL - Language/locale identifier, defaults to the current Kirby language
 );
 // => ["BE"=>"België, "FR"=>"Frankrijk", "DE"=>"Duitsland"]
