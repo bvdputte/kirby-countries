@@ -1,12 +1,11 @@
 # Kirby 3 Countries list
 
-A little utility to add work with countries
+A little utility to add work with countries in Kirby (Fields/localization)
 
 ## Installation
 
-- unzip [master.zip](https://github.com/bvdputte/***/archive/master.zip) as folder `site/plugins/***` or
-- `git submodule add https://github.com/bvdputte/***.git site/plugins/***`
-- `composer require bvdputte/kirby-***`
+- unzip [master.zip](https://github.com/bvdputte/kirby-countries/archive/master.zip) as folder `site/plugins/kirby-countries` or
+- `git submodule add https://github.com/bvdputte/kirby-countries.git site/plugins/kirby-countries`
 
 ### Add necessary country data
 
@@ -66,7 +65,7 @@ bvdputte\Countries::codesToArray(
 
 ## Disclaimer
 
-This plugin is provided "as is" with no guarantee. Use it at your own risk and always test it yourself before using it in a production environment. If you find any issues, please [create a new issue](https://github.com/bvdputte/***/issues/new).
+This plugin is provided "as is" with no guarantee. Use it at your own risk and always test it yourself before using it in a production environment. If you find any issues, please [create a new issue](https://github.com/bvdputte/kirby-countries/issues/new).
 
 ## License
 
