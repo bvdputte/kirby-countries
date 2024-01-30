@@ -1,6 +1,6 @@
 <?php
 
-require __DIR__ . DS . "src" . DS . "Countries.php";
+require __DIR__ . "/src/Countries.php";
 
 @include_once __DIR__ . '/vendor/autoload.php';
 
